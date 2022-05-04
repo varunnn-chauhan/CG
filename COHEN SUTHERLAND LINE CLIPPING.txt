@@ -1,0 +1,13 @@
+#include<iostream.h>
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+#include<math.h>
+
+typedef unsigned int outcode;
+enum {TOP=0X1, BOTTOM=0X2, RIGHT=0X4, LEFT+=0X8;}
+int calcode(float,float,float,float,float,float);
+void lineclip(float xo,float yo,float x1)
+{
+
+}

@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+#include<math.h>
+#include<dos.h>
+void ddaline(int,int,int,int);
+void main()
+{
+ int x1,y1,x2,y2;
+ clrscr();
+ cout<<"Enter the first coordinate : "<<endl;
+ cin>>x1>>y1;
+ cout<<"Enter the second coordinate : "<<endl;
+ cin>>x2>>y2;
+ ddaline(x1,y1,x2,y2);
+ getch();
+}
+void ddaline(int p,int q,int p2,int q2)
+{
+ int gd=DETECT,gm;
+ initgraph(&gd,&gd,"C:\\tc\\BGI");
+ int step;
+ int dx=p2-p;
+ int dy=q2-q;
+ if(abs(dx)>abs(dy))
+   step=abs(dx);
+ else
+   step=abs(dy);
+ float newx=dx/(float)step;
+ float newy=dy/(float)step;
+ float x=(float)p;
+ float y=(float)p;
+ putpixel(p+10,(470-q),15);
+ for(int i=1;i<=step;i++)
+ {
+  x+=newx;
+  y+=newy;
+  putpixel(floor(x+0.5),(470-floor(y+0.5),15);
+ }
+ putpixel(p2+10,(470-q2),15);
+}
